@@ -1,0 +1,4 @@
+Interviewer asked me to implement MinHeap data structure from scratch including HeapifyUp/Down, Dequeue, Enqueue, Peek.
+ Similar to "Top K Elements" (LC 347) but with different form - "Hire" (Interviewer had comments on indentation and readability)
+Round 3: Crossword Puzzle (LC 2018), was not able to come up with optimal solution and not all edge cases were covered - "No Hire" (It led to my rejection)
+Round 4: Priority Queue question (LC 347) - "Strongly Hire".
