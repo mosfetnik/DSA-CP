@@ -10,7 +10,7 @@ TreeNode *searchBST(TreeNode *root, int val)
         {
             root = root->right;
         }
-        els
+        else
         {
             root = root->left
         }
