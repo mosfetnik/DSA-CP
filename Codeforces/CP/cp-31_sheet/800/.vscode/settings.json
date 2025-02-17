@@ -3,6 +3,7 @@
         ".env*": "dotenv",
         "*.css": "tailwindcss",
         "*.tcc": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ostream": "cpp"
     }
 }
