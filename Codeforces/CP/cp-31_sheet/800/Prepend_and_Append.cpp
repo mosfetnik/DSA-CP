@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
- 
+
 using namespace std;
- 
+
 void solve()
 {
     int n;
@@ -17,7 +17,7 @@ void solve()
     }
     cout << ans << '\n';
 }
- 
+
 int main()
 {
     ios::sync_with_stdio(false);
