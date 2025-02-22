@@ -20,8 +20,8 @@ bool isCylceDFS(vector<int> adj[], int u, vector<bool> &visited, int parent)
 bool isCycle(int V, vector<int> adj[])
 {
     vector<bool> visited(V, false);
-    // step 1 -- visiting all vectexes in the graph
-    // if there is any unconnected vectex so that will missed if we did not run this loop
+    //* step 1 -- visiting all vectexes in the graph
+    //* if there is any unconnected vectex so that will missed if we did not run this loop
 
     for (int i = 0; i < V; i++)
     {
