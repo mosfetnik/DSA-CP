@@ -6,7 +6,6 @@ vector topo_sort(vector<vector<int>> adj)
     int n = adj.size();
     vector<int> inDegree(n, 0);
     queue<int> que;
-    int count = 0;
 
     // step 1 - calculating the indegree of every node.
     for (int u = 0; u < n; u++)
@@ -24,17 +23,18 @@ vector topo_sort(vector<vector<int>> adj)
         if (inDegree[i] == 0)
         {
             que.push(i);
-            count++;
         }
     }
 
     // step 3 - implement the BFS
 
+    vector<int> result;
+
     while (!que.empty())
     {
-        int u = que.front();
 
-        
+        int u = que.front();
+        result.push_back(u);
         que.pop();
         for (int &v : adj[u])
         {
@@ -42,16 +42,8 @@ vector topo_sort(vector<vector<int>> adj)
             if (inDegee[v] == 0)
             {
                 que.push(v);
-                count++;
             }
         }
     }
-    if (count == n)
-    {
-        return false;
-    }
-    else
-    {
-        return true;
-    }
+    return result;
 }
