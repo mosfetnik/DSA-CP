@@ -1,5 +1,4 @@
-class Solution {
-    public:
+
         bool topo_logical_sort(unordered_map<int, vector<int>>& adj, int n,
                                vector<int>& inDegree) {
     
@@ -50,4 +49,4 @@ class Solution {
             }
                 return topo_logical_sort(adj, numCourses, inDegree);
         }
-    };
+    
