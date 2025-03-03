@@ -1,4 +1,3 @@
-b
-aabbbabaa
-bbbb
-bbbaab
+DA
+NET
+NET
