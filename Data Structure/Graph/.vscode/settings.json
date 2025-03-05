@@ -6,6 +6,11 @@
         "bitset": "cpp",
         "chrono": "cpp",
         "algorithm": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "array": "cpp",
+        "initializer_list": "cpp",
+        "regex": "cpp",
+        "utility": "cpp",
+        "valarray": "cpp"
     }
 }
