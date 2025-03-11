@@ -6,19 +6,34 @@ void solve()
 {
     string s;
     cin >> s;
-
-    ll n = s.length();
-    ll swapCount = 0;
-
-    for (ll i = 0; i < n - 1; i++)
-    {
-        if (s[i] != s[i + 1])
-            swapCount++;
-        
+    
+    // Count zeros and ones
+    int zeros = 0, ones = 0;
+    for (char c : s) {
+        if (c == '0') zeros++;
+        else ones++;
     }
-
-    ll result = n- (swapCount+1);
-    cout << result << '\n';
+    
+    // Process the string
+    for (int i = 0; i < s.length(); i++) {
+        // If current character is '0', we remove a '1'
+        if (s[i] == '0') {
+            ones--;
+        }
+        // If current character is '1', we remove a '0'
+        else {
+            zeros--;
+        }
+        
+        // Check if we can't continue removing characters
+        if (zeros < 0 || ones < 0) {
+            cout << s.length() - i << endl;
+            return;
+        }
+    }
+    
+    // If we processed the entire string
+    cout << 0 << endl;
 }
 
 int main()

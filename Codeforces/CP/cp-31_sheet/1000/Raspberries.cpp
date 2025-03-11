@@ -1,44 +1,30 @@
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long;
 
-void solve()
-{
-    int n, k;
-    cin >> n >> k;
+int main() {
+    int t; 
+    cin >> t; 
 
-    vector<int> arr(n);
+    while (t--) { 
+        int n, k;
+        cin >> n >> k;
 
-    ll min_val = INT_MAX;
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-        min_val = min(arr[i], INT_MAX);
-    }
+        vector<int> a(n);
+        int evenCount = 0, ans = INT_MAX;
 
-    int count = 0;
-    ll product = 1;
-
-    for (int i = 0; i < n; i++){
-        product *= arr[i];
-
-        if( product %k ==0){
-            cout<<
+        for (int i = 0; i < n; ++i) {
+            cin >> a[i];
+            if (a[i] % 2 == 0) ++evenCount;
+            ans = min(ans, ((a[i] + k - 1) / k) * k - a[i]);
         }
 
+        if (k == 4) {
+            if (evenCount >= 2) ans = 0;
+            else ans = min(ans, 2 - evenCount);
+        }
+
+        cout << ans << "\n";
     }
 
-   
-}
-
-int main()
-{
-    int t;
-    cin >> t;
-
-    while (t--)
-    {
-        solve();
-    }
     return 0;
 }
