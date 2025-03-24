@@ -2,6 +2,7 @@
     "files.associations": {
         ".env*": "dotenv",
         "*.css": "tailwindcss",
-        "regex": "cpp"
+        "regex": "cpp",
+        "ostream": "cpp"
     }
 }
