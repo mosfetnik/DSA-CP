@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        ".env*": "dotenv",
+        "*.css": "tailwindcss",
+        "ostream": "cpp",
+        "iostream": "cpp"
+    }
+}
