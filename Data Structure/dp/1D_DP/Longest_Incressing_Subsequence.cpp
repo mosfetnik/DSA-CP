@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    // * using brute force two loops
+    // * using brute force two loops(bottom up)
     vector<int> arr = {10, 9, 2, 5, 3, 7, 101, 18};
 
     int n = arr.size();
@@ -26,7 +26,7 @@ int main()
 
 
 
-
+}
     // * using recursion
 
       
