@@ -1,3 +1,5 @@
+// O(n^2)
+// o(ncr)
 class Solution
 {
 public:
