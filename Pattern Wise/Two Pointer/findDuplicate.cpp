@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int duplicate(vector<int> nums)
@@ -9,7 +9,8 @@ int duplicate(vector<int> nums)
 
     // * Move the pointers initially:
     // * slow moves one step, fast moves two steps
-    do {
+    do
+    {
         slow = nums[slow];
         fast = nums[nums[fast]];
     } while (slow != fast);
@@ -18,7 +19,8 @@ int duplicate(vector<int> nums)
     slow = nums[0];
 
     // ^ This time both slow and fast move one step at a time
-    while (slow != fast) {
+    while (slow != fast)
+    {
         slow = nums[slow];
         fast = nums[fast];
     }
