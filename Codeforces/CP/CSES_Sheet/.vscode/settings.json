@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        ".env*": "dotenv",
+        "*.css": "tailwindcss",
+        "regex": "cpp",
+        "ostream": "cpp",
+        "bitset": "cpp"
+    }
+}
