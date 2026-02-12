@@ -2,6 +2,10 @@
     "files.associations": {
         ".env*": "dotenv",
         "*.css": "tailwindcss",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "array": "cpp"
     }
 }

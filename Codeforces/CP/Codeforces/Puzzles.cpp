@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-    int m, n;
-    cin >> m >> n; 
+    ll n, m;
+    cin >> n >> m;
 
     vector<ll> arr(m);
     for (int i = 0; i < m; i++)
@@ -13,15 +13,17 @@ int main()
         cin >> arr[i];
     }
 
-    sort(arr.begin(), arr.end()); 
-    
-    ll min_diff = LLONG_MAX; // Use LLONG_MAX for long long
-    for (int i = 0; i <= m - n; i++) // Fix loop range
-    {
-        min_diff = min(min_diff, arr[i + n - 1] - arr[i]);
-    }
+    sort(arr.begin(), arr.end());
 
-    cout << min_diff << endl;
+    ll best = INT_MAX;
+
+    for (int i = 0; i <= m - n; ++i)
+    {
+        best = min(best, arr[i + n - 1] - arr[i]);
+    }
+  
+
+    cout << best << endl;
 
     return 0;
 }

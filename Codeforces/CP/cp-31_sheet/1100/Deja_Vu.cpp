@@ -8,21 +8,24 @@ void solve()
     cin >> n >> q;
 
     vector<ll> a(n);
-    for (int i = 0; i < n; ++i)
-        cin >> a[i];
-    vector<ll> x(q);
-    for (int i = 0; i < q; ++i)
-        cin >> x[i];
-    for (int j = 0; j < q; j++)
-    {
-        ll x_i = x[j];
-        ll x_pow = 1LL << x_i;
-        ll x_div = 1LL << (x_i - 1);
+    for (auto &i : a)
+        cin >> i;
 
-        for (int k = 0; k < n; k++)
+    int l = 1e18, x;
+    for (int i = 0; i < q; i++)
+    {
+        cin >> x;
+        if (l > x)
         {
-            if (a[k] % x_pow == 0)
-                a[k] += x_div;
+            l = x;
+            for (int j = 0; j < n; j++)
+            {
+
+                if (a[j] % (1 << x)==0)
+                {
+                    a[j] += (1 << x - 1);
+                }
+            }
         }
     }
 

@@ -24,18 +24,18 @@ int main()
         }
     }
 
-    if (cnt1 >= cnt2)
+    if (cnt1 > cnt2)
     {
         for (int i = 0; i < n; i++)
         {
-            s[i] = tolower(s[i]);
+            s[i] = toupper(s[i]);
         }
     }
     else
     {
         for (int i = 0; i < n; i++)
         {
-            s[i] = toupper(s[i]);
+            s[i] = tolower(s[i]);
         }
     }
     cout << s << endl;

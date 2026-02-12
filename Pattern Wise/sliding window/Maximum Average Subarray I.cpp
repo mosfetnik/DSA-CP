@@ -19,6 +19,6 @@ public:
             max_sum = max(sum, max_sum);
         }
         
-        return max_sum / k;
+        return max_sum /k;
     }
 };

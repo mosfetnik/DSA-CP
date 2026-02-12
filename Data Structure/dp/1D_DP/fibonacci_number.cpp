@@ -25,8 +25,10 @@ int fib_memo(int n, vector<int> &dp)
 // & Complexity: O(n), Space Complexity: O(n)
 int fib_bottom_up(int n)
 {
-    if (n == 0) return 0;
-    if (n == 1) return 1;
+    if (n == 0)
+        return 0;
+    if (n == 1)
+        return 1;
 
     vector<int> arr(n + 1);
     arr[0] = 0;
@@ -37,15 +39,17 @@ int fib_bottom_up(int n)
         arr[i] = arr[i - 1] + arr[i - 2];
     }
 
-    return arr[n]; 
+    return arr[n];
 }
 
 // * Fibonacci number using Space-Optimized DP
 // & Complexity: O(n), Space Complexity: O(1)
 int fibo(int n)
 {
-    if (n == 0) return 0;
-    if (n == 1) return 1;
+    if (n == 0)
+        return 0;
+    if (n == 1)
+        return 1;
 
     int a = 0, b = 1, c = 1;
 

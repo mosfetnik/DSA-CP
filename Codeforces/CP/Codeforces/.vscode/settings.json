@@ -3,6 +3,7 @@
         ".env*": "dotenv",
         "*.css": "tailwindcss",
         "regex": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "bitset": "cpp"
     }
 }

@@ -9,30 +9,41 @@ void solve()
 
     vector<int> arr(n);
     for (int i = 0; i < n; i++)
-    {
+
         cin >> arr[i];
-    }
+
     int i = 0;
     int j = n - 1;
-    int maxi = INT_MIN;
-    int one = 0;
-    int two = 0;
+
+    int leftSum = 0;
+    int rightSum = 0;
+    bool firstTurn = 1;
     while (i <= j)
     {
-
-        maxi = max(arr[i], arr[j]);
-        if (arr[i] < arr[j])
+        int picked;
+        if (arr[i] > arr[j])
         {
-            two += maxi;
-            j--;
+            picked = arr[i];
+            i++;
         }
         else
         {
-            one += maxi;
-            i++;
+            picked = arr[j];
+            j--;
         }
+
+        if (firstTurn)
+        {
+            leftSum += picked;
+        }
+        else
+        {
+            rightSum += picked;
+        }
+
+        firstTurn = !firstTurn;
     }
-    cout << one << " " << two << endl;
+    cout << leftSum << " " << rightSum << endl;
 }
 
 int32_t main()
